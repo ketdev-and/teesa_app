@@ -59,6 +59,10 @@ class LoginFragment : Fragment() {
         binding.lgButton.setOnClickListener {
             loginUser(model)
         }
+
+        binding.lgRegButton.setOnClickListener {
+            Navigation.findNavController(view!!).navigate(R.id.registerFragment)
+        }
     }
 
     private fun loginUser(authModel:ApiViewmodel){
