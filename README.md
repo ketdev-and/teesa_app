@@ -11,6 +11,9 @@ Name- Chinedu Lawrence
 Assigment Completed
 
 
+
+
+
 Login View
 
 
@@ -18,6 +21,10 @@ Register View
 
 
 DashBoard
+
+
+
+
 
 
 *****Used Tools******
@@ -36,6 +43,10 @@ Dagger Hilt dependency injection
 
 
 Google Truth - unit testing
+
+
+
+
 
 
 //used temporary data stored in an array in place of authentication response suposed to be gotten from api(didnt work)
