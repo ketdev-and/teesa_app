@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Teesas</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="reg_info">Access many Tutorials and Engaging Videos</string>
+    <string name="input_enter_name">Enter Name</string>
+    <string name="input_enter_phone">Enter Phone Number</string>
+    <string name="input_enter_email">Enter Email Address</string>
+    <string name="input_enter_password">Enter Password</string>
+    <string name="location">City / Nearest Location</string>
+    <string name="input_enter_date">Date of Birth</string>
+    <string name="register">Register</string>
+    <string name="privacy_policy"><u>Privacy Policy</u> and <u>T&amp;C</u></string>
+    <string name="great_to_see_you_again">Great to see you again</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="or">OR</string>
+    <string name="login_with">Login with</string>
+    <string name="google">Google</string>
+    <string name="facebook">facebook</string>
+    <string name="login">Login</string>
+</resources>

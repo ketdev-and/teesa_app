@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sz_8">8dp</dimen>
+    <dimen name="sz_16">16dp</dimen>
+    <dimen name="sz_24">24dp</dimen>
+    <dimen name="sz_32">32dp</dimen>
+    <dimen name="sz_40">40dp</dimen>
+    <dimen name="sz_48">48dp</dimen>
+
+
+    <dimen name="tsz_8">8sp</dimen>
+    <dimen name="tsz_12">12sp</dimen>
+    <dimen name="tsz_16">16sp</dimen>
+    <dimen name="tsz_20">20sp</dimen>
+    <dimen name="tsz_24">24sp</dimen>
+</resources>

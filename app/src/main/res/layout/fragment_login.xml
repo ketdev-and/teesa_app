@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.RegisterLogin">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/lgAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="0dp"
+        app:elevation="0dp"
+        android:translationZ="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/lgToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:titleTextAppearance="@style/app_bar_text"
+            app:navigationIcon="@drawable/ic_baseline_keyboard_backspace_24"
+            app:navigationIconTint="@color/black"
+            app:title="Login"
+            app:titleTextColor="@color/black" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="@dimen/sz_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lgAppBarLayout">
+
+        <TextView
+            android:id="@+id/regInfoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/great_to_see_you_again"
+            android:textColor="@color/ts_primary"
+            android:textSize="@dimen/tsz_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/entPhone"
+            style="@style/outlined_inputs_field"
+            android:layout_marginTop="24dp"
+            android:theme="@style/outlined_inputs_field"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regInfoText">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/input_phone">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/countryCodePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_areaCodeDetectedCountry="true"
+                    app:ccp_arrowSize="@dimen/tsz_24"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_autoFormatNumber="true"
+                    app:ccp_contentColor="@color/ts_primary"
+                    app:ccp_showFlag="false"
+                    app:ccp_showNameCode="false"
+                    app:ccp_textGravity="CENTER"
+                    app:ccp_textSize="@dimen/tsz_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/sz_32"
+                    android:background="@color/ts_primary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/countryCodePicker"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/lg_phoneNo"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/sz_48"
+                    android:hint="@string/input_enter_phone"
+                    android:inputType="phone"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/ts_primary"
+                    android:textSize="@dimen/tsz_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/countryCodePicker"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/entPassword"
+            style="@style/outlined_inputs_field"
+            android:layout_marginTop="32dp"
+            android:theme="@style/outlined_inputs_field"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/ts_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/entPhone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lg_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sz_48"
+                android:hint="@string/input_enter_password"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:textColorHint="@color/ts_primary"
+                android:textSize="@dimen/tsz_16" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Remeber Me"
+            android:textColor="@color/ts_primary"
+            android:textSize="@dimen/tsz_16"
+            app:buttonTint="@color/ts_secondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/entPassword" />
+
+        <TextView
+            android:id="@+id/lg_forgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/forgot_password"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tsz_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+        <Button
+            android:id="@+id/lg_button"
+            style="@style/button_solid"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/ts_secondary"
+            android:text="@string/login"
+            app:layout_constraintBottom_toTopOf="@+id/lg_0r"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lg_forgot" />
+
+        <TextView
+            android:id="@+id/lg_0r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/or"
+            android:textColor="@color/ts_primary"
+            android:textSize="@dimen/tsz_12"
+            app:layout_constraintBottom_toTopOf="@+id/lg_login_with"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lg_button" />
+
+        <TextView
+            android:id="@+id/lg_login_with"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_with"
+            android:textColor="@color/ts_secondary"
+            android:textSize="@dimen/tsz_12"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lg_0r" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lg_login_with">
+
+            <Button
+                style="@style/button_outline"
+                android:layout_width="140dp"
+                android:layout_height="@dimen/sz_48"
+                android:layout_marginHorizontal="8dp"
+                android:text="@string/google"
+                app:icon="@drawable/ic_icons8_google"
+                app:iconGravity="start"
+                app:iconSize="@dimen/sz_24"
+                app:iconTint="@null"
+                app:layout_constraintTop_toBottomOf="@+id/lg_login_with"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <Button
+                style="@style/button_outline"
+                android:layout_width="140dp"
+                android:layout_height="@dimen/sz_48"
+                android:layout_marginHorizontal="8dp"
+                android:text="@string/facebook"
+                app:icon="@drawable/ic_icons8_facebook"
+                app:iconGravity="start"
+                app:iconSize="@dimen/sz_24"
+                app:iconTint="@null"
+                app:layout_constraintTop_toBottomOf="@+id/lg_login_with"
+                tools:layout_editor_absoluteX="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <TextView
+                android:id="@+id/lg_create_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Create a new account?"
+                android:textColor="@color/ts_primary"
+                android:textSize="@dimen/tsz_16"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+            <Button
+                android:id="@+id/lg_reg_button"
+                style="@style/button_solid"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="@dimen/sz_8"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/ts_secondary"
+                android:text="@string/register"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lg_forgot" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
