@@ -1,21 +1,40 @@
 
 Email - ketdevand"gmail.com
+
+
 Name- Chinedu Lawrence
+
 
 # teesa_app
 
+
 Assigment Completed
+
 
 Login View
 
+
 Register View
+
 
 DashBoard
 
+
 *****Used Tools******
+
+
 MVVM architecture
+
+
 Retrofit
+
+
+View Binding
+
+
 Dagger Hilt dependency injection
+
+
 Google Truth - unit testing
 
 
